@@ -43,7 +43,7 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "io.github.rcycjack" // Replace with your GitHub username or org
             artifactId = "labeltransliterator"
-            version = "0.1.0"
+            version = "0.3.0"
 
             // Important: publish Android library AAR, not Java jar
             afterEvaluate {

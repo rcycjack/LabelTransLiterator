@@ -48,9 +48,10 @@ dependencyResolutionManagement {
 
 2. Add the library dependency:
 
-```kotlin
+#Latest Version: 0.3.0
+        
 dependencies {
-    implementation("com.github.rcycjack:labeltransliterator:0.1.0")
+    implementation("com.github.rcycjack:labeltransliterator:VERSION")
 }
 ```
 
