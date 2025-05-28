@@ -1,9 +1,3 @@
-# LabelTransliterator
-A lightweight Android library maps the first character of any string to an A–Z alphabetical category
-
----
-
-````markdown
 # 📚 LabelTransLiterator
 
 **LabelTransLiterator** is a lightweight Android library that maps the **first character of a string** to an **A–Z alphabetical label**. If no Latin alphabet letter applies, it returns **`#`**. It supports many scripts and languages by transliterating based on the user's Android system language settings.
@@ -50,7 +44,7 @@ dependencyResolutionManagement {
         maven("https://jitpack.io")
     }
 }
-````
+
 
 2. Add the library dependency:
 
