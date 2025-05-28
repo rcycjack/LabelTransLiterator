@@ -43,7 +43,7 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "io.github.rcycjack" // Replace with your GitHub username or org
             artifactId = "labeltransliterator"
-            version = "1.0.0"
+            version = "0.1.0"
 
             // Important: publish Android library AAR, not Java jar
             afterEvaluate {
@@ -55,9 +55,7 @@ publishing {
 
 dependencies {
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
+    implementation("androidx.core:core-ktx:1.10.1")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

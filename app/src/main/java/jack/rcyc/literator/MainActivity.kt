@@ -11,18 +11,24 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import jack.rcyc.labeltransliterator.LabelTransform
 import jack.rcyc.literator.ui.theme.LableTransliteratorTheme
 
 class MainActivity : ComponentActivity() {
+
+    private val labelTransform = LabelTransform()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
         setContent {
             LableTransliteratorTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
                         name = "Android",
-                        modifier = Modifier.padding(innerPadding)
+                        modifier = Modifier.padding(innerPadding),
+                        labelTransform
                     )
                 }
             }
@@ -31,9 +37,9 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Greeting(name: String, modifier: Modifier = Modifier, labelTransform: LabelTransform) {
     Text(
-        text = "Hello $name!",
+        text = "支付宝 : ${labelTransform.getRepresentLetter("支付宝")}",
         modifier = modifier
     )
 }
@@ -42,6 +48,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     LableTransliteratorTheme {
-        Greeting("Android")
+        Greeting("Android", labelTransform = LabelTransform())
     }
 }
