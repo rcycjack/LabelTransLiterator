@@ -50,7 +50,7 @@ dependencyResolutionManagement {
 
 ```kotlin
 dependencies {
-    implementation("com.github.rcycjack:labeltransliterator:1.0.0")
+    implementation("com.github.rcycjack:labeltransliterator:0.1.0")
 }
 ```
 
